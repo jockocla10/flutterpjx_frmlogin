@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:jmpjx001g/pages/MyHomepage.dart';
-import 'package:jmpjx001g/pages/frmLogin.dart';
+//import 'package:jmpjx001g/pages/MyHomepage.dart';
+
+import 'package:jmpjx001g/pages/frm_login02.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const MyWidget(title: 'LOGIN'),
+      home: const MyWidget02(title: 'LOGIN'),
     );
   }
 }

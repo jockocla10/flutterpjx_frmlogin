@@ -1,19 +1,47 @@
 // ignore: file_names
-import 'package:flutter/material.dart';
-
+import 'package:flutter/material.dart'
+    show
+        AppBar,
+        BorderRadius,
+        BorderSide,
+        BuildContext,
+        Center,
+        Color,
+        Column,
+        EdgeInsets,
+        ElevatedButton,
+        Image,
+        InputDecoration,
+        MaterialApp,
+        OutlineInputBorder,
+        OutlinedButton,
+        Padding,
+        RoundedRectangleBorder,
+        Scaffold,
+        SizedBox,
+        State,
+        StatefulWidget,
+        Text,
+        TextAlign,
+        TextFormField,
+        TextStyle,
+        Widget;
+// ignore: implementation_imports
 import 'package:flutter/src/widgets/basic.dart';
 
-class MyWidget extends StatefulWidget {
-  const MyWidget({Key? key, required String title}) : super(key: key);
+class MyWidget02 extends StatefulWidget {
+  const MyWidget02({super.key, required String title});
 
   @override
-  State<MyWidget> createState() => _MyWidgetState();
+  State<MyWidget02> createState() => _MyWidgetState02();
 }
 
-class _MyWidgetState extends State<MyWidget> {
+class _MyWidgetState02 extends State<MyWidget02> {
   get child => null;
 
   get text => null;
+
+  get onPressed => null;
 
   @override
   Widget build(BuildContext context) {
@@ -25,10 +53,11 @@ class _MyWidgetState extends State<MyWidget> {
           backgroundColor: const Color.fromARGB(255, 6, 104, 153),
         ),
         body: Padding(
-          padding: const EdgeInsets.only(top: 120, left: 24, right: 24),
+          padding: const EdgeInsets.only(top: 60, left: 24, right: 24),
           child: Center(
             child: Column(
               children: [
+                Image.asset("assets/login.png", height: 200, width: 200),
                 const Text(
                   'Login :',
                   style: TextStyle(fontSize: 20),
@@ -64,7 +93,6 @@ class _MyWidgetState extends State<MyWidget> {
                 Column(
                   children: [
                     TextFormField(
-                      obscureText: true,
                       decoration: InputDecoration(
                         fillColor: const Color(0xffF1F0F5),
                         filled: true,
@@ -96,6 +124,54 @@ class _MyWidgetState extends State<MyWidget> {
                   onPressed: () {},
                   child: const Text('Login', style: TextStyle(fontSize: 20)),
                 ),
+                const SizedBox(height: 40, width: 300),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    OutlinedButton(
+                      style: OutlinedButton.styleFrom(
+                        foregroundColor: const Color.fromARGB(
+                          255,
+                          245,
+                          246,
+                          247,
+                        ),
+                        shadowColor: const Color.fromARGB(255, 47, 47, 48),
+                        elevation: 1,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(5.0),
+                        ),
+                        minimumSize: const Size(130, 30),
+                      ),
+                      onPressed: () {},
+                      child: const Text(
+                        'Sign Up',
+                        style: TextStyle(fontSize: 12),
+                      ),
+                    ),
+                    OutlinedButton(
+                      style: OutlinedButton.styleFrom(
+                        foregroundColor: const Color.fromARGB(
+                          255,
+                          245,
+                          246,
+                          247,
+                        ),
+                        shadowColor: const Color.fromARGB(255, 47, 47, 48),
+                        elevation: 1,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(5.0),
+                        ),
+                        minimumSize: const Size(130, 30),
+                      ),
+                      onPressed: () {},
+                      child: const Text(
+                        'Forgot Password',
+                        style: TextStyle(fontSize: 12),
+                      ),
+                    ),
+                  ],
+                ),
               ],
             ),
           ),
@@ -111,5 +187,3 @@ class _MyWidgetState extends State<MyWidget> {
 class LinkableElement {
   get url => null;
 }
-
-class color_of_choice {}

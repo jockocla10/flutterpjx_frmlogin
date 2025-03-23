@@ -8,7 +8,6 @@ class ProfilePage extends StatefulWidget {
 }
 
 class _ProfilePageState extends State<ProfilePage> {
-
   var index = 0;
   List<String> randomNames = [
     "Indra",
@@ -61,9 +60,7 @@ class _ProfilePageState extends State<ProfilePage> {
   Widget build(BuildContext context) {
     print('build-> name: $name');
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Profile Page"),
-      ),
+      appBar: AppBar(title: Text("Profile Page")),
       body: Center(
         child: GestureDetector(
           onTap: () => changeName(),
@@ -77,10 +74,7 @@ class _ProfilePageState extends State<ProfilePage> {
               ),
               Container(
                 color: Colors.yellow,
-                child: Image.asset(
-                  width: 100,
-                  "assets/logo.png"
-                ),
+                child: Image.asset(width: 100, "assets/logo.png"),
               ),
               Text(
                 name,
